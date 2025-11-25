@@ -1,5 +1,70 @@
 # Netflix Recommendation System - Collaborative Filtering
 
+## How to run
+
+### Clone the repository
+```bash
+git clone https://github.com/Khoa-BOB/Netflix_RecommendationSystem.git
+cd Netflix_RecommendationSystem
+```
+
+### Create and activate a virtual environment
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Run the program
+
+#### Basic usage (with default parameters)
+```bash
+python main.py
+```
+
+#### Run with custom parameters
+```bash
+python main.py --k <neighborhood_size> --metrics <similarity_metric> --cf_type <cf_type>
+```
+
+**Available parameters:**
+- `--k`: Neighborhood size (default: 10)
+  - Example values: 3, 6, 9, 12, 15, 20
+- `--metrics`: Similarity metric (default: cosine)
+  - Options: `cosine` or `pearson`
+- `--cf_type`: Collaborative filtering type (default: item)
+  - Options: `item` or `user`
+
+**Examples:**
+```bash
+# Item-based CF with cosine similarity and k=20
+python main.py --k 20 --metrics cosine --cf_type item
+
+# User-based CF with pearson correlation and k=10
+python main.py --k 10 --metrics pearson --cf_type user
+
+# Item-based CF with pearson and k=15
+python main.py --k 15 --metrics pearson --cf_type item
+```
+
+#### Run comprehensive experiments (all combinations)
+To test multiple k values across all CF types and similarity metrics:
+```bash
+# For local testing
+python run_k_experiments.py
+
+# For HPC cluster submission (SLURM)
+sbatch submit_k_experiments.sbatch
+```
+
+This will test 24 configurations and generate detailed results.
+
+---
+
 ## Results Summary
 
 ### ITEM-based CF with COSINE similarity
@@ -83,3 +148,7 @@
 ---
 
 *Results generated from: k_experiments_results_20251125_073304.json*
+
+## Reference
+[Empirical Analysis of Predictive Algorithms for Collaborative
+Filtering](https://arxiv.org/ftp/arxiv/papers/1301/1301.7363.pdf)

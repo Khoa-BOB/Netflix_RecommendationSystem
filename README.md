@@ -1,5 +1,7 @@
 # Netflix Recommendation System - Collaborative Filtering
 
+A memory-based collaborative filtering recommendation system that predicts user movie ratings using both item-based and user-based approaches. The system implements cosine similarity and Pearson correlation metrics to find similar items or users, enabling personalized movie recommendations based on neighborhood-based predictions.
+
 ## How to run
 
 ### Clone the repository

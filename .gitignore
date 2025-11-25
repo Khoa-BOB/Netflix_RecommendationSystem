@@ -1,0 +1,111 @@
+# ----------------------------------------
+# Python
+# ----------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python egg metadata
+*.egg-info/
+.eggs/
+
+# ----------------------------------------
+# Build / packaging
+# ----------------------------------------
+build/
+dist/
+*.egg
+*.whl
+
+# ----------------------------------------
+# Logs & outputs
+# ----------------------------------------
+*.log
+logs/
+output/
+results/
+
+# ----------------------------------------
+# OS-specific files
+# ----------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ----------------------------------------
+# IDE / Editor
+# ----------------------------------------
+# VS Code
+.vscode/
+.history/
+
+# JetBrains
+.idea/
+
+# ----------------------------------------
+# Environments / Config
+# ----------------------------------------
+.env
+*.env
+.env.*
+!env.example
+
+# ----------------------------------------
+# Temp files
+# ----------------------------------------
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ----------------------------------------
+# Data files
+# ----------------------------------------
+*.csv
+*.tsv
+*.jsonl
+data/
+datasets/
+
+# ----------------------------------------
+# Cache
+# ----------------------------------------
+.cache/
+__cache__/
+.cache_dir/
+
+# ----------------------------------------
+# Model files (ML projects)
+# ----------------------------------------
+*.pt
+*.pth
+*.bin
+*.ckpt
+checkpoints/
+model/
+models/
+
+# HuggingFace cache
+huggingface/
+hf_cache/
+transformers_cache/
+
+draft/

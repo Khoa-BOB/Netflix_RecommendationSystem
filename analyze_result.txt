@@ -1,0 +1,41 @@
+=== DATASET OVERVIEW ===
+Total ratings: 3106
+Unique movies: 35
+Unique users: 2328
+
+=== SPARSITY ANALYSIS ===
+Matrix dimensions: 2328 users × 35 movies
+Possible ratings: 81480
+Actual ratings: 3106
+Sparsity: 96.19%
+
+=== RATINGS PER MOVIE ===
+Mean: 88.7
+Median: 68.0
+Min: 28
+Max: 302
+Std: 58.1
+
+=== RATINGS PER USER ===
+Mean: 1.3
+Median: 1.0
+Min: 1
+Max: 32
+Std: 1.5
+
+=== RATING VALUES DISTRIBUTION ===
+rating
+1.0    580
+2.0    557
+3.0    950
+4.0    565
+5.0    454
+Name: count, dtype: int64
+
+=== POTENTIAL ISSUES ===
+Movies with < 10 ratings: 0 (0.0%)
+Users with < 3 ratings: 2200 (94.5%)
+
+=== COLLABORATIVE FILTERING SUITABILITY ===
+Users with 2+ ratings: 370 (15.9%)
+Movies with 2+ ratings: 35 (100.0%)

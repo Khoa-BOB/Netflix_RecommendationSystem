@@ -1,0 +1,10 @@
+DATASET DESCRIPTION
+
+This dataset is a small subset of the data provided as part of the Netflix
+Prize. Each line in the ratings.txt file has the format:
+1,UserID,Rating.
+Each row represents a rating of a movie by some user. Ratings are integers from
+1 to 5. 
+
+The file titles.txt is from the original Netflix dataset. The former has rows having the format:
+MovieID,Title

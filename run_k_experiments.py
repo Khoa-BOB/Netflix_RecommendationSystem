@@ -51,22 +51,19 @@ def run_experiments():
                 # Evaluate
                 eval_results = evaluate_model(model=model, test_df=test_df)
 
-                # Calculate MSE (RMSE squared)
-                mse = eval_results['rmse'] ** 2
-
                 # Store results
                 result = {
                     'cf_type': cf_type,
                     'similarity': similarity,
                     'k': k,
-                    'mse': mse,
+                    'mse': eval_results['mse'],
                     'rmse': eval_results['rmse'],
                     'mae': eval_results['mae']
                 }
                 results.append(result)
 
                 print(f"\nResults for {cf_type}-based, {similarity}, k={k}:")
-                print(f"  MSE:  {mse:.4f}")
+                print(f"  MSE:  {eval_results['mse']:.4f}")
                 print(f"  RMSE: {eval_results['rmse']:.4f}")
                 print(f"  MAE:  {eval_results['mae']:.4f}")
 

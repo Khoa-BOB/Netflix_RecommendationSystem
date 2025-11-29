@@ -13,9 +13,11 @@ def evaluate_model(model, test_df):
     actual = test_df['rating'].values
 
     # Metrics
-    rmse = np.sqrt(mean_squared_error(actual, predictions))
+    mse = mean_squared_error(actual, predictions)
+    rmse = np.sqrt(mse)
     mae = mean_absolute_error(actual, predictions)
 
+    print(f"MSE: {mse:.4f}")
     print(f"RMSE: {rmse:.4f}")
     print(f"MAE: {mae:.4f}")
 
@@ -24,4 +26,4 @@ def evaluate_model(model, test_df):
     print(f"\nMean Error: {errors.mean():.4f}")
     print(f"Error Std Dev: {errors.std():.4f}")
 
-    return {'rmse': rmse, 'mae': mae, 'predictions': predictions}
+    return {'mse': mse, 'rmse': rmse, 'mae': mae, 'predictions': predictions}

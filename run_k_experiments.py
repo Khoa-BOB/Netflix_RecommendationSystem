@@ -9,7 +9,7 @@ from collab_filtering.evaluation import evaluate_model
 
 def run_experiments():
     # Different k values to test
-    k_values = [5, 10, 20, 30, 50, 100]
+    k_values = [3, 6, 9, 12, 15, 20]
 
     # Test both similarity metrics
     similarity_metrics = ['cosine', 'pearson']
